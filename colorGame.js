@@ -5,15 +5,31 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.getElementById("message");
 var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener("click", function() {
+	//gernate all new colors
+	colors = generateRandomColors(6);
+	//pick new randonm color from array
+	pickedColor = pickColor();
+	//Change colorDisplay to match picked color
+	colorDisplay.textContent = pickedColor;
+	//change colors of squares
+	for(var i = 0; i < squares.length; i++){
+		squares[i].style.backgroundColor = colors[i];
+	}
+});
 
 colorDisplay.textContent = pickedColor;
 
 for(var i = 0; i < squares.length; i++){
+	//add initial colors to squares
 	squares[i].style.backgroundColor = colors[i];
-
+	//add click listeners to squares
 	squares[i].addEventListener("click", function() {
+		//add initial colors to squares
 		var clickedColor = this.style.backgroundColor;
-
+		//compare color to pickedColor
 		if(clickedColor=== pickedColor){
 			changeColors(clickedColor);
 			messageDisplay.textContent = "Correct!"
