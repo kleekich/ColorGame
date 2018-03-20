@@ -19,13 +19,16 @@ body {
 h1{
 	color: white;
 	text-align: center;
+	font-weight: normal;
 	font-family: 'Montserrat', sans-serif;
 	background: steelblue;
 	margin: 0;
+	padding: 20px 0;
 
 }
 #colorDisplay{
 	text-transform:uppercase;
+	font-size: 200%;
 }
 
 
@@ -40,3 +43,7 @@ h1{
 .selected {
 	background: blue;
 } 
+
+button {
+	border:none;
+}
