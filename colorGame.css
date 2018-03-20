@@ -1,5 +1,6 @@
 body {
 	background-color: #232323;
+	margin: 0;
 }
 
 .square {
@@ -17,6 +18,14 @@ body {
 
 h1{
 	color: white;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	background: steelblue;
+	margin: 0;
+
+}
+#colorDisplay{
+	text-transform:uppercase;
 }
 
 
